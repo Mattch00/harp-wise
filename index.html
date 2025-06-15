@@ -2,18 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Harp-Wise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harp Wise</title>
   <style>
     body {
       font-family: sans-serif;
       text-align: center;
-      padding-top: 100px;
-      background: #f5f5f5;
+      padding: 2rem;
     }
   </style>
 </head>
 <body>
-  <h1>🎵 Harp-Wise</h1>
-  <p>Coming soon: a dynamic, multi levelled, harmonica coaching app!</p>
+
+  <h1>🎵 Harp Wise</h1>
+  <p>Click the microphone to toggle it on or off.</p>
+
+  <!-- 🎤 Microphone Icon -->
+  <svg id="mic-icon" width="64" height="64" viewBox="0 0 24 24" fill="green" xmlns="http://www.w3.org/2000/svg" style="cursor:pointer;">
+    <path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 14 0h-2zM11 18h2v3h-2v-3z"/>
+  </svg>
+
+  <!-- 🧠 JavaScript Logic -->
+  <script>
+    const micIcon = document.getElementById('mic-icon');
+    let micOn = true;
+
+    micIcon.addEventListener('click', () => {
+      micOn = !micOn;
+      micIcon.setAttribute('fill', micOn ? 'green' : 'red');
+      console.log('Microphone is now', micOn ? 'ON' : 'OFF');
+    });
+  </script>
+
 </body>
 </html>
+🧭 What to do next:
+Replace everything in your current index.html with the code above.
+
+Save it.
+
+Go back to Git Bash and run:
+
+bash
+Copy
+Edit
+git add index.html
+git commit -m "Fix index.html with complete mic toggle feature"
+git push
